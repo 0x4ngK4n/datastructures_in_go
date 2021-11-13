@@ -1,5 +1,11 @@
-//Code from tutorials from Junmin Lee.
-//Had fun understanding and writing these code.
+/*
+Based on example of Junmin Lee (YouTube)
+
+Implemented Trie as a collection of linked array of size 26
+Each element of the array is tied to a character a-z
+Tries are great for searches but take up huge spaces as each character has to be assigned an array of length 26 (Space vs Time complexity)
+
+*/
 
 package main
 
@@ -71,4 +77,3 @@ func main() {
 	}
 	fmt.Println(myTrie.Search("oreo"))
 }
-
