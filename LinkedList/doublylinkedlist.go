@@ -1,4 +1,4 @@
-// In pursuit of learning pointers,impelemeted a doubly linked list in Go
+// In pursuit of learning pointers, implemented a doubly linked list in Go
 
 package main
 
