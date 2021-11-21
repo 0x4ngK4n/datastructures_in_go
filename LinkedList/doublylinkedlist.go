@@ -68,20 +68,20 @@ func (d DoublyLinkedList) Search(v string) bool {
 	return false
 }
 
-func (d *DoublyLinkedList) SearchAndDelete(v string) {
-	//Deleting the head
+func (d *DoublyLinkedList) Delete(v string) {
+	// Deleting the head
 	if d.head.value == v {
-		// If head is being deleted
 		d.head = d.head.after
 		d.head.before = nil
 		return
 	}
-	//Deleting the tail
+	// Deleting the tail
 	if d.tail.value == v {
 		d.tail = d.tail.before
 		d.tail.after = nil
 		return
 	}
+	// Delete anywhere in between
 	previousNode := d.head
 	for previousNode.after != nil {
 		if previousNode.after.value == v {
@@ -111,7 +111,7 @@ func main() {
 	fmt.Println("Searching element")
 	fmt.Println(myDoublyLinkedList.Search("3"))
 	fmt.Println("Deleting the element")
-	myDoublyLinkedList.SearchAndDelete("3")
+	myDoublyLinkedList.Delete("3")
 	fmt.Println("Searching the element again... ")
 	fmt.Println(myDoublyLinkedList.Search("3"))
 	fmt.Println("Print list backwards")
