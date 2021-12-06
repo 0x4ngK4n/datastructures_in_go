@@ -22,7 +22,7 @@ func (n *Node) Insert(k int) {
 	} else if n.Key > k {
 		// move left
 		if n.Left == nil {
-			// if left chils is empty
+			// if left child is is empty
 			n.Left = &Node{Key: k}
 		} else {
 			n.Left.Insert(k)
